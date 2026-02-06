@@ -1,0 +1,231 @@
+/* Üldine reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Lehe taust ja font */
+body {
+    background-color: #0d0d0d;
+    color: #00ff88;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    padding: 40px;
+    
+    overflow-x: hidden; /* ❗ hoiab ära horisontaalse scrolli */
+    overflow-y: auto;   /* ✅ LUBAB scrollbar'i */
+}
+h1, p, ul, table {
+    position: relative;
+    z-index: 10;
+}
+
+/* Pealkirjad */
+h1, h2 {
+    color: #00ffaa;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.4);
+}
+
+h1::before {
+    content: "> ";
+    color: #00ff88;
+}
+
+/* Paragraaf */
+p {
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+/* Lingid */
+a {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ff88;
+}
+
+/* List */
+ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+ul li::before {
+    content: "$ ";
+    color: #00ffaa;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Eraldusjoon */
+hr {
+    border: none;
+    border-top: 1px solid #00ff88;
+    margin: 40px 0;
+    opacity: 0.4;
+}
+
+/* Tabel */
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    padding: 10px 20px 10px 0;
+    vertical-align: top;
+}
+
+/* Vasak veerg */
+td:first-child {
+    color: #00ffaa;
+}
+
+/* Pilt */
+img {
+    max-width: 200px;
+    border: 1px solid #00ff88;
+    filter: grayscale(100%) contrast(120%);
+}
+
+/* Väike glitch-hõng */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 136, 0.03),
+        rgba(0, 255, 136, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+}
+.grid-container {
+    --grid: 10rem;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 100rem;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.grid-container .plane {
+    --dir: 1;
+    width: 300%;
+    height: 150%;
+    min-height: 70rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotateX(85deg);
+}
+
+.grid-container .plane:last-child {
+    --dir: -1;
+    top: 0;
+    bottom: auto;
+    transform-origin: top center;
+    transform: translateX(-50%) rotateX(-85deg);
+}
+
+.grid-container .plane > div {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+}
+
+.grid-container .plane > div::before,
+.grid-container .plane > div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.grid-container .grid::before {
+    background-image:
+        repeating-linear-gradient(
+            to left,
+            #00ff88,
+            #00ff88 4px,
+            transparent 4px,
+            transparent var(--grid)
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            #00ff88,
+            #00ff88 4px,
+            transparent 4px,
+            transparent var(--grid)
+        );
+    animation: move 1s linear infinite;
+}
+
+.grid-container .grid::after {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) var(--grid),
+        rgba(0, 0, 0, 0)
+    );
+    transform: translateZ(1px);
+}
+
+.grid-container .plane:last-child .grid::after {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) var(--grid),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.grid-container .glow {
+    filter: blur(1rem);
+    mix-blend-mode: plus-lighter;
+}
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(calc(var(--grid) * var(--dir)));
+    }
+}
+
+
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffaa;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00ff88 black;
+}
