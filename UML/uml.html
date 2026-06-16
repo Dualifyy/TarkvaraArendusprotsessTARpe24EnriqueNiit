@@ -1,36 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unified Modeling Language</title>
 </head>
 <body>
-    <h1>Unified Modeling Language ehk UML</h1>
-    <br>
-    <br>
-    <h2>Mis on UML?</h2> <br>
+
+    <h1>Unified Modeling Language (UML)</h1>
+
+    <h2>Mis on UML?</h2>
+
     <p>
-        UML ehk Ühtne modelleerimiskeel on üldotstarbeline noteeringukeel. <br>
-        Mis on noteeringukeel? Noteeringukeel ehk inglise keeles visual <br>
-        modeling language on tähistus andmete, teabe, teadmiste või süsteemide <br>
-        väljendamiseks struktuuris, mis on määratletud järjepidava reeglistikuga. <br>
-        <br>
-        UML'i kasutatakse keerulise tarkvara, peamiselt suurte objektorienteeritud prjektide spetsifitseerimiseks ja visualiseerimiseks. <br>
-        UML põhineb vanematel noteeringu meetoditel nagu Booch, OMT ja OOSE. <br>
-        <br>
+        UML (Unified Modeling Language) ehk ühtne modelleerimiskeel on standardne
+        visuaalne keel tarkvarasüsteemide modelleerimiseks, kirjeldamiseks ja
+        dokumenteerimiseks.
     </p>
-    <br>
-    <br>
-    <img src="https://cdn-images.visual-paradigm.com/guide/data-modeling/what-is-erd/17-dfd-data-store-modeled-by-erd.png" alt="erd">  <br>
-    <h4>ERD ⬆️</h4> <br>
-    <img src="https://cdn-images.visual-paradigm.com/guide/uml/what-is-activity-diagram/04-activity-diagram-example-process-order.png" alt="activity diagram"> <br>
-    <h4>Activity Diagram ⬆️</h4> <br>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLtk8TDMotshacv6d7_7-Ib1y7iu-LxM80OFpZDJEIQfS_Z-XVMTdYrRU&s=10" alt="flowchart"> <br>
-    <h4>Flow chart ⬆️</h4> <br>
 
+    <p>
+        UML võimaldab arendajatel, analüütikutel ja klientidel paremini mõista
+        süsteemi struktuuri ning käitumist enne programmeerimist.
+    </p>
 
+    <h2>UML diagrammide loetelu</h2>
 
-    
+    <ul>
+        <li><a href="erd.html">ERD (Entity Relationship Diagram)</a></li>
+        <li><a href="flowchart.html">Flowchart / Activity Diagram</a></li>
+        <li><a href="usecase.html">Use Case Diagram</a></li>
+        <li><a href="classdiagram.html">Class Diagram</a></li>
+        <li><a href="sequence.html">Sequence Diagram</a></li>
+        <li><a href="statediagram.html">State Diagram</a></li>
+        <li><a href="component.html">Component Diagram</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>Use Case Diagram</h2>
+
+    <p>
+        Kirjeldab süsteemi kasutajaid (aktoreid) ja nende tegevusi süsteemis.
+    </p>
+
+    <h3>Olulised elemendid</h3>
+
+    <ul>
+        <li>Actor – süsteemi kasutaja</li>
+        <li>Use Case – tegevus või funktsioon</li>
+        <li>Association – ühendus kasutaja ja tegevuse vahel</li>
+    </ul>
+
+    <img src="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/wp-content/uploads/sites/2/2019/01/use-case-diagram-tutorial.png"
+         alt="Use Case Diagram" width="500">
+
+    <hr>
+
+    <h2>Class Diagram</h2>
+
+    <p>
+        Näitab klasse, nende atribuute, meetodeid ja seoseid.
+    </p>
+
+    <h3>Olulised elemendid</h3>
+
+    <ul>
+        <li>Class</li>
+        <li>Attribute</li>
+        <li>Method</li>
+        <li>Inheritance</li>
+        <li>Association</li>
+    </ul>
+
+    <img src="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/wp-content/uploads/sites/2/2019/11/class-diagram-example.png"
+         alt="Class Diagram" width="500">
+
+    <hr>
+
+    <h2>Sequence Diagram</h2>
+
+    <p>
+        Näitab objektide vahelist suhtlust ajateljel.
+    </p>
+
+    <h3>Olulised elemendid</h3>
+
+    <ul>
+        <li>Lifeline</li>
+        <li>Message</li>
+        <li>Activation</li>
+    </ul>
+
+    <img src="https://cdn-images.visual-paradigm.com/guide/uml/what-is-sequence-diagram/01-sequence-diagram-example.png"
+         alt="Sequence Diagram" width="500">
+
+    <hr>
+
+    <h2>State Diagram</h2>
+
+    <p>
+        Kirjeldab objekti erinevaid olekuid ja üleminekuid nende vahel.
+    </p>
+
+    <h3>Olulised elemendid</h3>
+
+    <ul>
+        <li>Initial State</li>
+        <li>State</li>
+        <li>Transition</li>
+        <li>Final State</li>
+    </ul>
+
+    <img src="https://cdn-images.visual-paradigm.com/guide/uml/what-is-state-machine-diagram/state-machine-diagram-example.png"
+         alt="State Diagram" width="500">
+
+    <hr>
+
+    <h2>Component Diagram</h2>
+
+    <p>
+        Näitab süsteemi komponente ja nendevahelisi sõltuvusi.
+    </p>
+
+    <h3>Olulised elemendid</h3>
+
+    <ul>
+        <li>Component</li>
+        <li>Interface</li>
+        <li>Dependency</li>
+    </ul>
+
+    <img src="https://cdn-images.visual-paradigm.com/guide/uml/what-is-component-diagram/component-diagram-example.png"
+         alt="Component Diagram" width="500">
+
 </body>
 </html>
