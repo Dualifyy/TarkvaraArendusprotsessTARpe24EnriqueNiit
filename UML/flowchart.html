@@ -42,12 +42,59 @@
 <img src="activitydiagram.png"
      width="700">
 
-<h2>Bitcoin kalkulaatori vooskeem</h2>
-
-<p>
-    Selle kursuse käigus koostatud Bitcoin kalkulaatori vooskeem on samuti
-    Flowchart diagrammi näide ning kirjeldab rakenduse tööloogikat.
-</p>
+  <h3>Bitcoini kalkulaator</h3><br/>
+    <p>
+        <div class="diagram">
+            <pre>
+                 ---------
+                │  START  │
+                 --------- - ovaal
+                     │
+                     ▼
+            -------------------
+            │  Sisesta EUR    │
+            │     summa       │
+            ------------------- - Rööpkülik
+                     │
+                     ▼
+            -------------------
+            │  Laadi BTC      │
+            │    kurss        │
+            ------------------- - Rööpkülik
+                     │
+                     ▼
+                -----------
+             │  Kurss laeti  │
+             │  edukalt?     │ - Romb
+                -----------
+                    │
+               ┌────┴─────┐
+              JAH         EI
+               │           │
+               ▼           ▼
+         ------------  ------------ - Rööpkülikud
+         │  Arvuta  │  │  Kuva    │
+         │ EUR→BTC  │  │  viga    │
+         ------------   ------------
+               │             │
+               ▼             │
+         ------------        │
+         │  Kuva    │-Rööpkülik│
+         │ tulemus  │        │
+         ------------        │
+               │             │
+               ---------------
+                      │
+                      ▼
+                 --------- - Ovaal
+                │   END   │
+                 ---------
+            </pre>
+        </div>
+        See on bitcoini kalkulaator, kus alguses tuleb sisestada summa, siis laetakse see. Siis tuleb tingimus,<br/>
+        kui see laeb edukalt, siis liigutakse edasi arvutamiseni, kui ei siis kuvatakse viga ja protsess lõppeb.<br/>
+        Kui summa on arvutatud, siis kuvatakse tulemus ja protsess lõppeb.
+    </p><br/>
 
 <h2>Viited</h2>
 

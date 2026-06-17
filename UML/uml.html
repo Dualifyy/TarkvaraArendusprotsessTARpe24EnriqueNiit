@@ -138,5 +138,34 @@
      alt="Component Diagram"
      width="700">
 
+    <div class="diagram"><pre>
+            -----------------------          ------------------------
+            │      KASUTAJA       │          │       PROFIIL        │
+            -----------------------          ------------------------
+            │ PK   │ id           │ ││--││   │ PK   │ id            │
+            │      │ eesnimi      │          │ FK   │ kasutaja_id   │
+            │ UK   │ email        │          │      │ avatar_url    │
+            │      │ loodud       │          │      │ bio           │
+            -----------------------          ------------------------
+        </pre>
+        </div>
+
+         <h3>Ühenduselemendid</h3><br />
+    <p>
+        Ühenduselemendid näitavad, kuidas objektid üksteisega seotud on, siin on mõned näited:<br /><br />
+        Otsade põhisümbolid<br />
+        ---|| - Täpselt üks<br />
+        ---|o - Null või üks, ehk valikuline<br />
+        }---| - Üks või mitu<br />
+        }---o - Null, üks või mitu.<br />
+        Kombineeritud suhted<br />
+        ||---|| - Täpselt üks<br />
+        ||---o{ - Täpselt üks A - null kuni mitu B<br />
+        ||---|{ - Täpselt üks A - üks kuni mitu B<br />
+        |o---o{ - Null/üks A - null kuni mitu B<br />
+        }o---o{ - Null/mitu A - null/mitu B<br />
+    </p><br /><br />
+
+
 </body>
 </html>
